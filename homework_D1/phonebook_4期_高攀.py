@@ -54,7 +54,7 @@ class PhoneBook:
         query_list = []
         query = input("输入姓名或手机号：")
         for info in self.phonebook:
-            # in方法支持简单的模糊查询，==不支持
+            # in支持简单的模糊查询，==不支持
             if query == info['name'] or query == info['phone']:
             # if query in info['name'] or query in info['phone']:
                 query_list.append(info)
@@ -129,7 +129,6 @@ if __name__ == '__main__':
     book = PhoneBook()
     while True:
         print("1.增加；2.删除；3.修改；4.查找；5.退出")
-        print(book.phonebook)
         number = input("请输入需要的操作代号：")
         if number == '1':
             print("增加操作")
